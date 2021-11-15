@@ -25,9 +25,8 @@
     <h1>Is this thing working?</h1>
     <p>Aparently... it is.</p>
     <script>
-        window.alert('Hey, listen!') //Comando para emitir uma janela de alerta na tela. Também pode ser usada como: alert('Hey, listen!')
-        window.confirm('Just press OK. No questions asked.') //Comando para exibir uma janela de confirmação
-        window.prompt('Wait, who the hell are you!?') //Comando para exibir uma janela de inserção de texto
+        var nome = window.prompt('Wait, who the hell are you!?') //Comando para exibir uma janela de inserção de texto. Graças a var nome, o retorno do usuário pode ser armazenado
+        window.alert('Alright. Now get outta here ' + nome + '!!') //Exibe uma janela com o texto descrito e o valor armazenado na variável nome
     </script>
 </body>
 </html>
