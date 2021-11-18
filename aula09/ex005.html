@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(103, 191, 226);
+            font: normal 18pt Arial;
+            color: white
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <p>Aqui vai o resultado</p>
+    <div id='clickbait'>Clique em mim</div><!--Observe que esta tag tem um id-->
+    <script>
+        window.document.write('<br/><h1>Alguns testes abaixo:</h1>')//Escrevendo texto no body html através do JS, usando a adição de componentes via DOM
+
+        window.document.write('Olá Mundo!<br/>') 
+
+        window.document.write(document.charset) //Exibindo configuração atual de caractere usando adição de componentes via DOM
+
+        window.document.write('<br/>' + window.navigator.appName)//Exibindo nome do navegador
+
+        var p1 = window.document.getElementsByTagName('p')[0]//Pegando todos os elementos deste doc html que contém a tag "p". O retorno do getElementsByTagName() é um vetor. Por isso o indice 0 indica que apenas o primeiro paragrafo (elemento com tag "p") interessa.
+
+
+        document.write('<br/>' + p1)//Escreve o conteúdo de p1. Note que p1 não armazena o conteúdo textual do parágrafo, mas sim o objeto que é o parágrafo
+
+        document.write('<br/>' + p1.innerText)//Escrevendo o texto interno do primeiro parágrafo deste doc. Note que a formatação em negrito não se aplica, pois apenas o texto interno puro está sendo retornado
+
+        document.write('<br/>'+ p1.innerHTML)//Escrevendo texto HTML de p1. Note que desta vez a formatação em negrito foi retornada, pois foi requisitado o HTML em vez de apenas o texto interno
+
+
+        var bait = window.document.getElementById('clickbait')//Criando variável que referencia o elemento <div>
+        
+        bait.style.background = 'green'//Mudando bakcground do "botão" "clickbait"
+
+        bait.innerText = 'Click Me'//Mudando texto interno do botão
+
+        //window.document.getElementById('clickbait').innerText = 'Click Me'//Forma alternativa de fazer o mesmo que a linha de cima
+
+
+        //window.alert('<br/>' + p1.innerHTML)//Alerta que exibe o código html de p1
+
+        p1.style.color = 'crimson'//Mudando cor do parágrafo 1 através de um comando de CSS dentro do script JS
+
+        var corpo = window.document.body//Armazenando o elemento "body" do html dentro da variável "corpo". Tudo que for operado com esta variável irá interferir com todo o body html
+
+        corpo.style.background = 'black'//Mudando a cor do background do body através da variavel corpo
+
+
+    </script>
+</body>
+</html>
