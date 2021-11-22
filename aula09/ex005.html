@@ -18,6 +18,7 @@
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
     <p>Aqui vai o resultado</p>
     <div id='clickbait'>Clique em mim</div><!--Observe que esta tag tem um id-->
+    <!--<div class='clickbait'>Clique em mim</div>--><!--Observe que esta tag tem um class em vez de um id. Assim pode-se selecionar este elemento usando o getElementsByClassName('clickbait')[0]-->
     <script>
         window.document.write('<br/><h1>Alguns testes abaixo:</h1>')//Escrevendo texto no body html através do JS, usando a adição de componentes via DOM
 
@@ -54,6 +55,9 @@
 
         corpo.style.background = 'black'//Mudando a cor do background do body através da variavel corpo
 
+        bait = window.document.querySelector('div#clickbait')//Forma de armazenar um elemento DOM em uma variável utilizando seletor. A notação no parâmetro de querySelector é uma notação CSS. Usa-se "#" nesse caso porque a div referenciada é identificada por id. Se fosse referenciada por class, colocaria-se um "." no lugar do "#"
+        
+        bait.style.background = 'blue'//Mudando cor do background do "botão" Click Me
 
     </script>
 </body>
