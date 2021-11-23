@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
+        body{
+            background-color: black;
+        }
         div#area{
             font: normal 20pt Arial;
             background: rgb(36, 156, 36);
@@ -18,8 +21,15 @@
     </style>
 </head>
 <body>
-    <div id = 'area'>
+    <div id = "area" onclick = "clicar()"> <!--"onclick" indica que um evento do tipo click está associado a este elemento. Após o sinal de "=" declara-se a função desejada-->
         Interaja...
     </div>
+
+    <script>
+        function clicar(){//Declarando função que dará efeito ao botão "area" quando este for clicado
+            var botao = window.document.getElementById('area')//Armazenando o valor do botao "area" dentro desta variavel
+            botao.innerText = 'Clicou!'//Com isto, quando o evento "click" for ativado, o texto interno do botão mudará
+        }
+    </script>
 </body>
 </html>
