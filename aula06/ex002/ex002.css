@@ -1,0 +1,10 @@
+/*Essa parte indica que tudo que estiver no body terá essa configuração*/
+body{
+    background-color: rgb(27, 27, 27); /*Definindo cor de fundo*/
+    color: darkmagenta; /*Definindo cor da fonte*/
+    font: normal 17pt Arial /*Definindo propriedades da fonte*/
+}
+/*Essa parte indica que tudo que estiver no h1 terá essa configuração*/
+h1{
+    color: crimson;
+}
